@@ -1,0 +1,36 @@
+<select  [(ngModel)]="selected">
+  <option value="depot">Dépot</option>
+  <option value="retrait">Retrait</option>
+</select>
+
+<div id="recu" *ngIf="selected === 'depot'">
+  <h2>Entrée</h2>
+  <label for="montant">Montant</label>
+  <input type="number" id="montant" [(ngModel)]="depot">
+  <label for="date">Date</label>
+  <input type="date" id="date" [(ngModel)]="depotdate">
+  <button (click)="ajouterDepot(depot,depotdate)">Ajouter</button>
+</div>
+
+<div id="depense" *ngIf="selected === 'retrait'">
+  <h2>Dépense</h2>
+  <label for="montant">Montant</label>
+  <input type="number" id="montant" [(ngModel)]="dep">
+  <label for="date">Date</label>
+  <input type="date" id="date" [(ngModel)]="depdate">
+  <button (click)="ajouterDepense(dep,depdate)">Ajouter</button>
+</div>
+
+<button (click)="getDepenses()">Voir Depenses</button>
+<button (click)="getDepots()">Voir Dépots</button>
+
+<h3>Dépots</h3>
+<ul *ngFor="let item of depots; index as i">
+  <li >Montant : {{item.montant}} Date : {{item.date}}</li>
+</ul>
+
+
+<h3>Dépenses</h3>
+<ul *ngFor="let item of depenses; index as i">
+  <li >Montant : {{item.montant}} Date : {{item.date}}</li>
+</ul>
