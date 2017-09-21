@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json":"json-server --watch db.json"
+    "json": "json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +22,12 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@swimlane/ngx-charts": "^6.0.2",
+    "angular2-fusioncharts": "^1.0.2-rc.5",
+    "chart.js": "^2.7.0",
     "core-js": "^2.4.1",
+    "d3": "^4.10.2",
+    "ng2-charts": "^1.6.0",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
@@ -34,6 +39,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.1.1",
+    "fusioncharts": "^3.12.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "json-server": "^0.12.0",

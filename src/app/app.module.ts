@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
 import { BudgetManagerComponent } from './budget-manager/budget-manager.component';
+
+
 
 @NgModule({
   declarations: [
@@ -11,7 +14,8 @@ import { BudgetManagerComponent } from './budget-manager/budget-manager.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,16 +21,46 @@
   <button (click)="ajouterDepense(dep,depdate)">Ajouter</button>
 </div>
 
-<button (click)="getDepenses()">Voir Depenses</button>
-<button (click)="getDepots()">Voir Dépots</button>
+<!-- <button (click)="getDepenses()">Voir Depenses</button>
+<button (click)="getDepots()">Voir Dépots</button> -->
 
 <h3>Dépots</h3>
 <ul *ngFor="let item of depots; index as i">
-  <li >Montant : {{item.montant}} Date : {{item.date}}</li>
+  <li >Montant: {{item.montant}}€ - Date: {{item.date}}</li>
 </ul>
 
 
 <h3>Dépenses</h3>
 <ul *ngFor="let item of depenses; index as i">
-  <li >Montant : {{item.montant}} Date : {{item.date}}</li>
+  <li >Montant: {{item.montant}}€ - Date: {{item.date}}</li>
 </ul>
+
+
+
+
+
+
+
+
+
+
+<ngx-charts-bar-vertical
+[view]="view"
+[scheme]="colorScheme"
+[results]="single"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+(select)="onSelect($event)">
+</ngx-charts-bar-vertical>
+
+
+
+
+
+<script src="node_modules/chart.js/src/chart.js"></script>
